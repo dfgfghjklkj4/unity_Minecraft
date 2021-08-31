@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Minecraft/Scenes/SingleplayerURPSSAO.unity
+    guid: 75ecb90753aef214fb34615d8e9ab9bf
+  - enabled: 1
+    path: Assets/Minecraft/Scenes/test/SingleplayerURPlow.unity
+    guid: 23bbc9f5d68415946b9612a60b57260c
+  - enabled: 0
+    path: Assets/Graphy - Ultimate Stats Monitor/Scene - Customization/Scene/Customize
+      Graphy.unity
+    guid: 0c578a8ac126810458be2979ceb891a4
+  - enabled: 0
+    path: Assets/sdfs.unity
+    guid: 818dba317035f484092b3a7337f66ac7
+  m_configObjects: {}

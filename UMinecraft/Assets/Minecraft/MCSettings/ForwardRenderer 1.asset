@@ -1,0 +1,171 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8108973514902291099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62c9c65cf3354c93be831c8bc075510, type: 3}
+  m_Name: NewScreenSpaceAmbientOcclusion
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  m_Shader: {fileID: 4800000, guid: 0849e84e3d62649e8882e9d6f056a017, type: 3}
+  m_Settings:
+    Downsample: 1
+    Source: 1
+    NormalSamples: 1
+    Intensity: 1
+    DirectLightingStrength: 1
+    Radius: 0.5
+    SampleCount: 10
+--- !u!114 &-6561487877304540273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b03f660d87b19e4b8dbdabdf7e2d8ff, type: 3}
+  m_Name: NewAdditionPostProcessRendererFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  shader: {fileID: 0}
+  _Material: {fileID: 0}
+--- !u!114 &-6029476094387140205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f41305722c2b4412aff34884dec13f66, type: 3}
+  m_Name: NewLightShafts
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  settings:
+    lightShaftMaterial: {fileID: 2100000, guid: 9becc64c81cfbf14a803488e494fbe20, type: 2}
+--- !u!114 &-3158946625026412110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b78ddc2f5553042c98baa7a44524aac8, type: 3}
+  m_Name: NewVolumeFogFeature
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  settings:
+    Event: 250
+    volumeFogMaterial: {fileID: 2100000, guid: 8f34ce55fe8c7443f9c7daf6d23f7d11, type: 2}
+    volumeFogMaterialPassIndex: 0
+    destination: 0
+    textureId: _VolumeFogPassTexture
+    computeTexture: {fileID: 11400000, guid: acd766bdcc53644a18d7cf72a9ab5982, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de640fe3d0db1804a85f9fc8f5cadab6, type: 3}
+  m_Name: ForwardRenderer 1
+  m_EditorClassIdentifier: 
+  m_RendererFeatures:
+  - {fileID: -8108973514902291099}
+  m_RendererFeatureMap: 65bd32278d23778f
+  postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
+  xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
+  shaders:
+    blitPS: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
+    copyDepthPS: {fileID: 4800000, guid: d6dae50ee9e1bfa4db75f19f99355220, type: 3}
+    screenSpaceShadowPS: {fileID: 4800000, guid: 0f854b35a0cf61a429bd5dcfea30eddd, type: 3}
+    samplingPS: {fileID: 4800000, guid: 04c410c9937594faa893a11dceb85f7e, type: 3}
+    stencilDeferredPS: {fileID: 4800000, guid: e9155b26e1bc55942a41e518703fe304, type: 3}
+    fallbackErrorPS: {fileID: 4800000, guid: e6e9a19c3678ded42a3bc431ebef7dbd, type: 3}
+    materialErrorPS: {fileID: 4800000, guid: 5fd9a8feb75a4b5894c241777f519d4e, type: 3}
+  m_OpaqueLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_TransparentLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_DefaultStencilState:
+    overrideStencilState: 0
+    stencilReference: 0
+    stencilCompareFunction: 8
+    passOperation: 0
+    failOperation: 0
+    zFailOperation: 0
+  m_ShadowTransparentReceive: 0
+  m_RenderingMode: 0
+  m_AccurateGbufferNormals: 0
+--- !u!114 &585320376995029666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d83e95dd91dd9429b2f7c0eac78484, type: 3}
+  m_Name: NewInscattering
+  m_EditorClassIdentifier: 
+  m_Active: 1
+--- !u!114 &4845239002729163825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 836fba37e8552f541abf20055e192196, type: 3}
+  m_Name: NewAtmosphericFogRenderFeature
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  settings:
+    change: 0
+    material: {fileID: 2100000, guid: 39e0dc4bc7017be498814375f5033d21, type: 2}
+    color: {r: 0.7490196, g: 0.8901961, b: 1, a: 1}
+    sunColor: {r: 0.9528302, g: 0.89075017, b: 0.7775454, a: 1}
+    fogDensity: 0.05
+    fogDensityPower: 3.1
+    skyAlpha: 0.692
+    useHeightFog: 0
+    fogHeightStart: 1
+    fogHeightEnd: 1
+    fogHeightPower: 13.4
+    extraFogHeightEnd: 0
+    extraFogHeightPower: 15.8
+    directionalIntesity: 1
+    directionalPower: 5.98
+--- !u!114 &7580843180414085379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281190f913a91df4dae9991bf4a59192, type: 3}
+  m_Name: NewDepthNormalsFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  depthNormalsMaterial: {fileID: 0}
